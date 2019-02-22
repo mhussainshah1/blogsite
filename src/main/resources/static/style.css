@@ -1,11 +1,17 @@
-#heading{ /*attribute*/
+#heading{ /*id*/
 
 }
 
-#date{ /**/
+.blog-date{ /*class*/
     font-style: italic;
 }
 
-#blog{
+.blog{
     margin-top: 0px;
+}
+
+
+article{ /*element*/
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
