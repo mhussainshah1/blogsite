@@ -1,8 +1,11 @@
-.heading{
+#heading{ /*attribute*/
 
 }
 
-.date{
+#date{ /**/
     font-style: italic;
+}
+
+#blog{
     margin-top: 0px;
 }
