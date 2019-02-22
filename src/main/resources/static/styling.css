@@ -3,16 +3,16 @@
 }
 
 .blog{
-    margin-top: 0px;
+    padding: 10px;
 }
+
 #heading{ /*id*/
 
 }
+
 .heading{/*class*/
 
 }
-
 article{ /*element*/
-    padding-top: 0%;
-    padding-bottom: 0%;
+    padding: 0%;
 }
