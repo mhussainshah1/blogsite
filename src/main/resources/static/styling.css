@@ -14,8 +14,15 @@ article { /*element*/
     padding: 0%;
 }
 
+/*profile.html*/
 .icon{
     width: 42px;
     height: 42px;
+    border:0;
+}
+
+.profile-picture{
+    width: 400px;
+    height: 400px;
     border:0;
 }
