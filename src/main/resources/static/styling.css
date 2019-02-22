@@ -13,3 +13,9 @@
 article { /*element*/
     padding: 0%;
 }
+
+.icon{
+    width: 42px;
+    height: 42px;
+    border:0;
+}
