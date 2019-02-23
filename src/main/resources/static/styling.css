@@ -2,20 +2,17 @@
     font-style: italic;
 }
 
+h1, h2, h3, h4 { /*element*/
+    /*text-decoration: underline;*/
+    font-family: 'Felipa','Dancing Script', cursive;
+}
+
 #heading { /*id*/
 
 }
 
-.heading { /*class*/
-
-}
-
-article { /*element*/
-    padding: 0%;
-}
-
 /*profile.html*/
-.icon{
+.icon{ /*class*/
     width: 42px;
     height: 42px;
     border:0;
