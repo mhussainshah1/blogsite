@@ -26,3 +26,4 @@ HELP.md
 /build/
 
 ### resources ###
+src/main/resources/static/img

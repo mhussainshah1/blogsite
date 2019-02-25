@@ -49,11 +49,11 @@
     <p>What we haven't talked about much is the box itself. How is the size of the box calculated exactly? </p>
 
     <p>Here is a diagram:<br/>
-        <img alt="CSS box" src="/img/cssbox.png"></p>
+        <img alt="CSS box" src="https://res.cloudinary.com/mhussainshah1/image/upload/v1551117623/blog/cssbox.png"></p>
 
     <p>If you are a Firebug user, you might be used to the diagram like this, which does a nice job of showing you the
         numbers affecting any box on the page:
-        <img alt="" src="/img/firebox.png"></p>
+        <img alt="" src="https://res.cloudinary.com/mhussainshah1/image/upload/v1551117623/blog/firebox.png"></p>
 
     <p>Notice in both examples the margin is in the white. Margin is unique in that it doesn't affect the size of the
         box itself per se, but it affects other content interacting with the box, and thus an important part of the CSS
@@ -85,7 +85,7 @@
     <p>If you don't declare a width, and the box has static or relative positioning, the width will remain 100% in width
         and the padding and border will push inwards instead of outward. But if you explicitly set the width of the box
         to be 100%, the padding will push the box outward as normal.
-        <img alt="" src="/img/weird-1.png"></p>
+        <img alt="" src="https://res.cloudinary.com/mhussainshah1/image/upload/v1551117623/blog/weird-1.png"></p>
 
     <p>The lesson here being that the default width of a box isn't really 100% but a less tangible "whatever is left".
         This is particularly valuable to know, since there are lots of circumstances where it is immensely useful to
@@ -100,14 +100,14 @@
     <p>Absolutely positioned boxes that have no width set on them behave a bit strangely. Their width is only as wide as
         it needs to be to hold the content. So if the box contains a single word, the box is only as wide as that word
         renders. If it grows to two words, it'll grow that wide.
-        <img alt="" src="/img/abs-width.png"></p>
+        <img alt="" src="https://res.cloudinary.com/mhussainshah1/image/upload/v1551117623/blog/abs-width.png"></p>
 
     <p>This should continue until the box is 100% of the parent's width (the nearest parent with relative positioning,
         or browser window) and then begin to wrap. It feels natural and normal for boxes to expand vertically to
         accommodate content, but it just feels strange when it happens horizontally. That strange feeling is warranted,
         as there are plenty of quirks in how different browsers handle this, not to mention just the fact that text
         renders differently across platforms.
-        <img alt="" src="/img/text-render-abs.png"></p>
+        <img alt="" src="https://res.cloudinary.com/mhussainshah1/image/upload/v1551117623/blog/text-render-abs.png"></p>
 
     <h3>Floated Boxes With No Width</h3>
     <p>The same exact behavior is seen with floated elements with no widths. The box is only as wide as it needs to be
@@ -121,7 +121,7 @@
     <p>We've been kind of focusing on boxes as block-level elements here. It's easy to think of block-level elements as
         boxes, but inline elements are boxes too. Think of them as really really long and skinny rectangles, that just
         so happen to wrap at every line. They are able to have margin, padding, borders just like any other box.
-        <img alt="" src="/img/span.png"></p>
+        <img alt="" src="https://res.cloudinary.com/mhussainshah1/image/upload/v1551117623/blog/span.png"></p>
 
     <p>The wrapping is what makes it confusing. A left margin as shown above pushes the box to the right as you would
         suspect, but only the first line, as that is the beginning of the box. Padding is applied above and below the
@@ -136,7 +136,7 @@
 }
 </code></pre>
 
-    <p><img alt="The CSS Box Model" src="/img/all-is-a-box.jpg"></p>
+    <p><img alt="The CSS Box Model" src="https://res.cloudinary.com/mhussainshah1/image/upload/v1551117623/blog/all-is-a-box.jpg"></p>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
