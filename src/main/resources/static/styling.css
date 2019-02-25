@@ -1,6 +1,6 @@
-* { /*all*/
+/** { !*all*!
     border: 1px solid red !important;
-}
+}*/
 
 .blog-date {
     font-style: italic;

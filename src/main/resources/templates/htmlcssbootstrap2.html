@@ -3,15 +3,15 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
 
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Felipa" rel="stylesheet">
 
-    <title>Hello, world!</title>
+    <title>Understand the CSS Box model</title>
 
 </head>
 
@@ -40,18 +40,114 @@
 </div>
 <br/>
 <div class="container">
+    <h2>Understand the CSS Box model</h2>
+    <br>
+    <p>At the risk of over-repeating myself: <strong>every element in web design is a rectangular box</strong>. This was
+        my ah-ha moment that helped me really start to understand CSS-based web design and accomplish the layouts I
+        wanted to accomplish. We've talked about the positioning of these boxes a bit, and about their behavior.</p>
 
+    <p>What we haven't talked about much is the box itself. How is the size of the box calculated exactly? </p>
+
+    <p>Here is a diagram:<br/>
+        <img alt="CSS box" src="/img/cssbox.png"></p>
+
+    <p>If you are a Firebug user, you might be used to the diagram like this, which does a nice job of showing you the
+        numbers affecting any box on the page:
+        <img alt="" src="/img/firebox.png"></p>
+
+    <p>Notice in both examples the margin is in the white. Margin is unique in that it doesn't affect the size of the
+        box itself per se, but it affects other content interacting with the box, and thus an important part of the CSS
+        box model.</p>
+
+    <p>The size of the box itself is calculated like this:</p>
+
+    <table class="table table-striped">
+        <tbody>
+        <tr>
+            <td><b>Width</b></td>
+            <td>width + padding-left + padding-right + border-left + border-right</td>
+        </tr>
+        <tr>
+            <td><b>Height</b></td>
+            <td>height + padding-top + padding-bottom + border-top + border-bottom</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3>What if these values are undeclared?</h3>
+    <p>If padding or borders are undeclared, they are either zero (likely if you are using a css reset) or the browser
+        default value (probably <strong>not</strong> zero especially on form elements that are commonly not reset).</p>
+
+    <p>If the width of a box is undeclared (and the box is a block level element), things get a little weirder. Let's
+        start with that, and then move on to some other good-to-know stuff about the box model.</p>
+
+    <h3>The Default Width of Block Level Boxes</h3>
+    <p>If you don't declare a width, and the box has static or relative positioning, the width will remain 100% in width
+        and the padding and border will push inwards instead of outward. But if you explicitly set the width of the box
+        to be 100%, the padding will push the box outward as normal.
+        <img alt="" src="/img/weird-1.png"></p>
+
+    <p>The lesson here being that the default width of a box isn't really 100% but a less tangible "whatever is left".
+        This is particularly valuable to know, since there are lots of circumstances where it is immensely useful to
+        either <strong>set</strong> or <strong>not set</strong> a width.</p>
+
+    <p>The biggest ass-biter I always find with this is textarea elements, which very much need their widths set to
+        fight the required "cols" attribute, and are unable to have children elements. So you often need the textarea to
+        be explicitly set to 100%, yet have padding as well, pushing it too large to fit. In a static width environment,
+        we often resort to pixel widths that fit, but no such luck in fluid width environments.</p>
+
+    <h3>Absolute Boxes with No Width</h3>
+    <p>Absolutely positioned boxes that have no width set on them behave a bit strangely. Their width is only as wide as
+        it needs to be to hold the content. So if the box contains a single word, the box is only as wide as that word
+        renders. If it grows to two words, it'll grow that wide.
+        <img alt="" src="/img/abs-width.png"></p>
+
+    <p>This should continue until the box is 100% of the parent's width (the nearest parent with relative positioning,
+        or browser window) and then begin to wrap. It feels natural and normal for boxes to expand vertically to
+        accommodate content, but it just feels strange when it happens horizontally. That strange feeling is warranted,
+        as there are plenty of quirks in how different browsers handle this, not to mention just the fact that text
+        renders differently across platforms.
+        <img alt="" src="/img/text-render-abs.png"></p>
+
+    <h3>Floated Boxes With No Width</h3>
+    <p>The same exact behavior is seen with floated elements with no widths. The box is only as wide as it needs to be
+        to accommodate the content, up to as wide as its parent element (doesn't need to be relatively positioned
+        though). Because of the fragile nature of these width-less boxes, the lesson to take away here is to not rely on
+        them in mission-critical scenarios, like in overall page layout. If you float a column to use as a sidebar and
+        count on some element inside (like an image) to be responsible for holding its width, you are asking for
+        trouble.</p>
+
+    <h3>Inline Elements are Boxes Too</h3>
+    <p>We've been kind of focusing on boxes as block-level elements here. It's easy to think of block-level elements as
+        boxes, but inline elements are boxes too. Think of them as really really long and skinny rectangles, that just
+        so happen to wrap at every line. They are able to have margin, padding, borders just like any other box.
+        <img alt="" src="/img/span.png"></p>
+
+    <p>The wrapping is what makes it confusing. A left margin as shown above pushes the box to the right as you would
+        suspect, but only the first line, as that is the beginning of the box. Padding is applied above and below the
+        text like it should be, and when it wraps it ignores the line above its padding and begins where the line-height
+        dictates it should begin. The background was applied with transparency to see how it works more clearly.</p>
+
+    <h3>See it with your own eyes</h3>
+    <p>Wanna see every single "box" that makes up a page? Try putting this in the stylesheet temporarily:</p>
+
+    <pre><code>* {
+   border: 1px solid red !important;
+}
+</code></pre>
+
+    <p><img alt="The CSS Box Model" src="/img/all-is-a-box.jpg"></p>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -3,15 +3,15 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
     <link rel="stylesheet" th:href="@{/styling.css}" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Felipa" rel="stylesheet">
 
-    <title>Hello, world!</title>
+    <title>Apache Maven Project</title>
 
 </head>
 
@@ -40,18 +40,116 @@
 </div>
 <br/>
 <div class="container">
+    <h2>Apache Maven Project</h2>
+    <br>
+    <h3>Introduction</h3>
+    <p>Maven, a Yiddish word meaning <i>accumulator of knowledge</i>, was originally started as an attempt to simplify
+        the build processes in the Jakarta Turbine project. There were several projects each with their own Ant build
+        files that were all slightly different and JARs were checked into CVS. We wanted a standard way to build the
+        projects, a clear definition of what the project consisted of, an easy way to publish project information and a
+        way to share JARs across several projects.</p>
 
+    <p>The result is a tool that can now be used for building and managing any Java-based project. We hope that we have
+        created something that will make the day-to-day work of Java developers easier and generally help with the
+        comprehension of any Java-based project.</p>
+
+    <h3>Maven’s Objectives</h3>
+    <p>Maven’s primary goal is to allow a developer to comprehend the complete state of a development effort in the
+        shortest period of time. In order to attain this goal there are several areas of concern that Maven attempts to
+        deal with:</p>
+
+    <ul>
+        <li>Making the build process easy</li>
+        <li>Providing a uniform build system</li>
+        <li>Providing quality project information</li>
+        <li>Providing guidelines for best practices development</li>
+        <li>Allowing transparent migration to new features</li>
+    </ul>
+
+    <h3>Making the build process easy</h3>
+    <p>While using Maven doesn’t eliminate the need to know about the underlying mechanisms, Maven does provide a lot of
+        shielding from the details.</p>
+
+    <h3>Providing a uniform build system</h3>
+    <p>Maven allows a project to build using its project object model (POM) and a set of plugins that are shared by all
+        projects using Maven, providing a uniform build system. Once you familiarize yourself with how one Maven project
+        builds you automatically know how all Maven projects build saving you immense amounts of time when trying to
+        navigate many projects.</p>
+
+    <h3>Providing quality project information</h3>
+    <p>Maven provides plenty of useful project information that is in part taken from your POM and in part generated
+        from your project’s sources. For example, Maven can provide:</p>
+
+    <p>Change log document created directly from source control</p>
+
+    <ul>
+        <li>Cross referenced sources</li>
+        <li>List of mailing lists managed by the project</li>
+        <li>Dependency list</li>
+        <li>Unit test reports including coverage</li>
+        <li>As Maven improves the information set provided will improve, all of which will be transparent to users of
+            Maven.
+        </li>
+    </ul>
+
+    <p>Other products can also provide Maven plugins to allow their set of project information alongside some of the
+        standard information given by Maven, all still based on the POM.</p>
+
+    <h3>Providing guidelines for best practices development</h3>
+    <p>Maven aims to gather current principles for best practices development, and make it easy to guide a project in
+        that direction.</p>
+
+    <p>For example, specification, execution, and reporting of unit tests are part of the normal build cycle using
+        Maven. Current unit testing best practices were used as guidelines:</p>
+
+    <ul>
+        <li>Keeping your test source code in a separate, but parallel source tree</li>
+        <li>Using test case naming conventions to locate and execute tests</li>
+        <li>Have test cases setup their environment and don’t rely on customizing the build for test preparation.
+            Maven also aims to assist in project workflow such as release and issue management.
+        </li>
+    </ul>
+
+    <p>Maven also suggests some guidelines on how to layout your project’s directory structure so that once you learn
+        the layout you can easily navigate any other project that uses Maven and the same defaults.</p>
+
+    <h3>Allowing transparent migration to new features</h3>
+    <p>Maven provides an easy way for Maven clients to update their installations so that they can take advantage of any
+        changes that been made to Maven itself.</p>
+
+    <p>Installation of new or updated plugins from third parties or Maven itself has been made trivial for this
+        reason.</p>
+
+    <h2>What is Maven Not?</h2>
+    <p>You may have heard some of the following things about Maven:</p>
+
+    <ul>
+        <li>Maven is a site and documentation tool</li>
+        <li>Maven extends Ant to let you download dependencies</li>
+        <li>Maven is a set of reusable Ant scriptlets
+            While Maven does these things, as you can read above in the “What is Maven?” section, these are not the only
+            features Maven has, and its objectives are quite different.
+        </li>
+    </ul>
+
+    <p>Maven does encourage best practices, but we realise that some projects may not fit with these ideals for
+        historical reasons. While Maven is designed to be flexible, to an extent, in these situations and to the needs
+        of different projects, it can not cater to every situation without making compromises to the integrity of its
+        objectives.</p>
+
+    <p>If you decide to use Maven, and have an unusual build structure that you cannot reorganise, you may have to
+        forget some features or the use of Maven altogether.</p>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
