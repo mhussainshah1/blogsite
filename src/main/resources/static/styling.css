@@ -1,3 +1,7 @@
+* { /*all*/
+    border: 1px solid red !important;
+}
+
 .blog-date {
     font-style: italic;
 }
@@ -24,6 +28,3 @@ font-family: 'Felipa','Dancing Script', cursive;
     border: 0;
 }
 
-* { /*all*/
-    border: 1px solid red !important;
-}
