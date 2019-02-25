@@ -1,70 +1,82 @@
-## Program Design
-<quote>"The hardest single part of building a software system is deciding precisely what to build." —Fred Brooks</quote>
+## Naming Conventions
 
-When writing a program you need to begin with a solid understanding of the problem you intend to solve. Then, move on to understanding the data you will be using in your solution. Your program will use data in variables, constants and literals. Your program will also contain data structures, files and data validation.
+To design a solution algorithm, the programmer has to create variables and objects. To this, they need unique names for those variables and objects. All names should be meaningful. A named variable is a method of identifying a particular storage location in the computer.
 
-### Overview: Developing software solutions
-Requirements and design phase:
-+ Define the problem to be solved.
-+ Outline your solution on paper.
-+ Develop the outline into an algorithm.
-+ Test the algorithm for correctness.
-+ Document your solution.
-Implementation and verification phase:
-+ Code the algorithm into a specific programming language.
-+ Run the program on the computer.
-+ Test your program, make corrections.
-+ Repeat.
-Maintenance phase:
-+ Document and maintain the program.
+Often a name describes the type of data stored in a particular variable. For instance, a variable may be one of three simple data types: an integer, a real number or a character. You should pick a name that describes the variable. For example, if you need three numbers, number1, number2 and number3 are more meaningful than A, B and C. However taxRate, income, and nmbrDependents are even better names.
 
-### Three different approaches to program design:
-+ Procedural-driven
-    + Example: C, Fortran, Basic
-+ object-oriented / event-driven
-    + Example: Java, C#
-+ data-driven program design (called symbolic programming)
-    + Example: LISP
-### Top-down development
-Top-down development is an approach to software development. The designer formulates an overview of the problem. The designer then determines the necessary subsystems or components required to solve the problem. Each component is further refined in greater detail. At some point a solution emerges. Top-down development emphasizes planning.
+If variable consists of more than one word, use underscores as word separators, for example sales_tax and word_count. If you don't want an underscore, then words can be joined together with the use of a capital letter as a word separator, for example salesTax and wordCount. The latter is more common and is known as Camel Case.
 
-### Algorithm
-An algorithm is a set of detailed, unambiguous and ordered instructions. An algorithm illustrates steps to convert given input into the desired output.
+Most programming languages do not tolerate a space in a variable name, as a space would signal the end of the variable name and thus imply that there were two variables.
 
-### Pseudocode
-Pseudocode is an English language-like way of representing the algorithm
+For readability, it is not advisable to string together words all in lower case. A name such as ‘carregistration’ is much harder to read than ‘carRegistration’.
 
-Advantages of Pseudocode
-<br/>
-Conventions for Pseudocode
------------------------------------------------------------------------------------------------------------
-## Publishing your repository
+### How naming conventions apply to Java ...
+A well-written program should be self-documenting. Naming conventions make programs more understandable by making them easier to read. They can also give information about the function of the identifier-for example, whether it's a constant, package, or class-which can be helpful in understanding the code.
 
-### What is a repository?
-A repository is a storage space where you can access your project, its files, and all the versions of its files that Git saves.
-
-### Create an empty repository on GitHub
-Before you can push your local repository to GitHub you first need to create an empty repository.
-
-When you browse to your GitHub account you can click on the new repository button. The button looks like a plus sign and is found at the top right of the website.
-
-Alternatively, you can simply browse to [https://github.com/new](https://github.com/new). Fill in the name your repository and click the large green button at the bottom of the page to finish the process of creating it. Your repository will be located at **https://github.com/{your GitHub user name}/MyNewRepository**
-
-### Pushing your local repository to GitHub
-Now that you have a repository you can go back to your PC and push your existing repository to the one you just created. Make sure you have configured your commit author and email.
-
-Next, you need to tell your local version of Git about the remote repository. Your local branch is called **master**. Your remote branch is called **origin**.
-
-You do this by typing:
-`git remote add origin https://github.com/<your GitHub user name>/Products`
-
-The `git remote` command will add a new remote section called origin to our configuration.
-
-View the git configuration with `git config --list` to check if your remote repository is initialized.
-
-Running `git remote` without any arguments will show you the remote repository aliases.
-
-If you run the command with the -v option, as `git remote -v`, you can see the actual URL for each alias.
-
-------------------------------------------------------
+<table>
+    <th>
+        <td>Identifier Type</td>
+        <td>Rules for Naming</td>
+        <td>Examples</td>
+    </th>
+    <tr>
+        <td>Packages</td>
+        <td>
+            The prefix of a unique package name is always written in all-lowercase ASCII letters and should be one of the top-level domain names, currently com, edu, gov, mil, net, org, or one of the English two-letter codes identifying countries as specified in ISO Standard 3166, 1981. 
+            Subsequent components of the package name vary according to an organization's own internal naming conventions. Such conventions might specify that certain directory name components be division, department, project, machine, or login names.
+        </td>
+        <td>
+            <code>com.sun.eng</code><br/>
+            <code>com.apple.quicktime.v2</code><br/>
+            <code>edu.cmu.cs.bovik.cheese</code>
+        </td>
+    </tr>
+    <tr>
+        <td>Classes</td>
+        <td>Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).</td>
+        <td>
+            <code>class Raster;</code><br/>
+            <code>class ImageSprite;</code>
+        </td>
+    </tr>
+    <tr>
+        <td>Interfaces</td>
+        <td>Interface names should be capitalized like class names.</td>
+        <td>
+            </code>interface</code><br/> 
+            RasterDelegate;<br/>
+            interface Storing;
+        </td>
+    </tr>
+    <tr>
+        <td>Methods</td>
+        <td>Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.</td>
+        <td>
+            <code>run();</code><br/>
+            <code>runFast();</code><br/>
+            <code>getBackground();</code>
+        </td>
+    </tr>
+    <tr>
+        <td>Variables</td>
+        <td>
+            Except for variables, all instance, class, and class constants are in mixed case with a lowercase first letter. Internal words start with capital letters. Variable names should not start with underscore _ or dollar sign $ characters, even though both are allowed.
+            Variable names should be short yet meaningful. The choice of a variable name should be mnemonic- that is, designed to indicate to the casual observer the intent of its use. One-character variable names should be avoided except for temporary "throwaway" variables. Common names for temporary variables are i, j, k, m, and n for integers; c, d, and e for characters.
+        </td>
+        <td>
+            <code>int i;</code><br/>
+            <code>char c;</code><br/>
+            <code>float myWidth;</code>
+        </td>
+    </tr>
+    <tr>
+        <td>Constants</td>
+        <td>The names of variables declared class constants and of ANSI constants should be all uppercase with words separated by underscores ("_"). (ANSI constants should be avoided, for ease of debugging.)</td>
+        <td>
+            <code>static final int MIN_WIDTH = 4;</code> <br/>
+            <code>static final int MAX_WIDTH = 999;</code><br/>
+            <code>static final int GET_THE_CPU = 1;</code>
+        </td>
+    </tr>                
+</table>
 

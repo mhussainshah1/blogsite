@@ -3,15 +3,15 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
     <link rel="stylesheet" th:href="@{/styling.css}" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Felipa" rel="stylesheet">
 
-    <title>Hello, world!</title>
+    <title>Naming Conventions</title>
 
 </head>
 
@@ -39,16 +39,132 @@
     </nav>
 </div>
 <br/>
+<div class="container">
+    <h2>Naming Conventions</h2>
+
+    <p>To design a solution algorithm, the programmer has to create variables and objects. To this, they need unique
+        names for those variables and objects. All names should be meaningful. A named variable is a method of
+        identifying a particular storage location in the computer.</p>
+
+    <p>Often a name describes the type of data stored in a particular variable. For instance, a variable may be one of
+        three simple data types: an integer, a real number or a character. You should pick a name that describes the
+        variable. For example, if you need three numbers, number1, number2 and number3 are more meaningful than A, B and
+        C. However taxRate, income, and nmbrDependents are even better names.</p>
+
+    <p>If variable consists of more than one word, use underscores as word separators, for example <b>sales_tax</b> and
+        <b>word_count</b>. If you don't want an underscore, then words can be joined together with the use of a capital
+        letter as a word separator, for example salesTax and wordCount. The latter is more common and is known as Camel
+        Case.</p>
+
+    <p>Most programming languages do not tolerate a space in a variable name, as a space would signal the end of the
+        variable name and thus imply that there were two variables.</p>
+
+    <p>For readability, it is not advisable to string together words all in lower case. A name such as ‘carregistration’
+        is much harder to read than ‘carRegistration’.</p>
+
+    <h3>How naming conventions apply to Java ...</h3>
+
+    <p>A well-written program should be self-documenting. Naming conventions make programs more understandable by making
+        them easier to read. They can also give information about the function of the identifier-for example, whether
+        it's a constant, package, or class-which can be helpful in understanding the code.</p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Identifier Type</th>
+                <th align="center">Rules for Naming</th>
+                <th>Examples</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Packages</td>
+            <td>
+                The prefix of a unique package name is always written in all-lowercase ASCII letters and should be one
+                of the top-level domain names, currently com, edu, gov, mil, net, org, or one of the English two-letter
+                codes identifying countries as specified in ISO Standard 3166, 1981.
+                Subsequent components of the package name vary according to an organization's own internal naming
+                conventions. Such conventions might specify that certain directory name components be division,
+                department, project, machine, or login names.
+            </td>
+            <td>
+                <code>com.sun.eng</code><br/>
+                <code>com.apple.quicktime.v2</code><br/>
+                <code>edu.cmu.cs.bovik.cheese</code>
+            </td>
+        </tr>
+        <tr>
+            <td>Classes</td>
+            <td>Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try
+                to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations
+                (unless the abbreviation is much more widely used than the long form, such as URL or HTML).
+            </td>
+            <td>
+                <code>class Raster;</code><br/>
+                <code>class ImageSprite;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>Interfaces</td>
+            <td>Interface names should be capitalized like class names.</td>
+            <td>
+                <code>interface</code><br/>
+                RasterDelegate;<br/>
+                interface Storing;
+            </td>
+        </tr>
+        <tr>
+            <td>Methods</td>
+            <td>Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each
+                internal word capitalized.
+            </td>
+            <td>
+                <code>run();</code><br/>
+                <code>runFast();</code><br/>
+                <code>getBackground();</code>
+            </td>
+        </tr>
+        <tr>
+            <td>Variables</td>
+            <td>
+                Except for variables, all instance, class, and class constants are in mixed case with a lowercase first
+                letter. Internal words start with capital letters. Variable names should not start with underscore _ or
+                dollar sign $ characters, even though both are allowed.
+                Variable names should be short yet meaningful. The choice of a variable name should be mnemonic- that
+                is, designed to indicate to the casual observer the intent of its use. One-character variable names
+                should be avoided except for temporary "throwaway" variables. Common names for temporary variables are
+                i, j, k, m, and n for integers; c, d, and e for characters.
+            </td>
+            <td>
+                <code>int i;</code><br/>
+                <code>char c;</code><br/>
+                <code>float myWidth;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>Constants</td>
+            <td>The names of variables declared class constants and of ANSI constants should be all uppercase with words
+                separated by underscores ("_"). (ANSI constants should be avoided, for ease of debugging.)
+            </td>
+            <td>
+                <code>static final int MIN_WIDTH = 4;</code> <br/>
+                <code>static final int MAX_WIDTH = 999;</code><br/>
+                <code>static final int GET_THE_CPU = 1;</code>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

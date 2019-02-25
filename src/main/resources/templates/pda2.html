@@ -3,15 +3,15 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
     <link rel="stylesheet" th:href="@{/styling.css}" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Felipa" rel="stylesheet">
 
-    <title>Hello, world!</title>
+    <title>Pseudocode and Algorithms</title>
 
 </head>
 
@@ -40,18 +40,86 @@
 </div>
 <br/>
 <div class="container">
+    <h2>Pseudocode and Algorithms</h2>
+    <br/>
+    <h3>Algorithm</h3>
+    <p>An algorithm represents the ordered sequence of steps required to solve a problem. Following the steps will
+        always result in the solution. When a computer is to solve a particular problem, the steps to the solution get
+        communicated to the computer. This makes the study of algorithms an important part of computer science.</p>
 
+    <p>The algorithm gets translated to a programming language, such as Java. The Java compiler will translate the
+        program into instructions the computer can execute. This produces the required output from the given input.</p>
+
+    <p>But translating the algorithm to computer code is not straight forward. To simplify the process, translate the
+        algorithm into pseudocode. The pseudocode will then more easily translate into Java or another programming
+        language.</p>
+
+    <h2>Pseudocode</h2>
+    <p>Pseudocode is a human-readable representation of an algorithm. It is not written the specific syntax of any
+        particular programming language. However, a programmer can easily translate pseudocode to Java because the
+        pseudocode is the algorithm plus any considerations for making it into a program.</p>
+
+    <p>There is not a standard format for pseudocode. It tends to be a cross between some of the more widely used
+        programming languages and natural language. Pseudocode can generally be read by programmers who are familiar
+        with different programming languages.</p>
+
+    <p>Pseudocode allows one to include all the constructs of the Structure Theorem. Pseudocode can include sequence,
+        selection and repetition as needed to perform the algorithm.</p>
+
+    <h2>Pseudocode Conventions</h2>
+    <ul>
+        <li>Statements are written in simple English.</li>
+        <li>Each instruction is written on a separate line.</li>
+        <li>Keywords and indentation are used to signify particular control structures.</li>
+        <li>Each set of instructions is written from top to bottom, with only one entry point and one exit point.</li>
+        <li>Groups of statements may be grouped into named modules.</li>
+    </ul>
+
+    <h2>So what's the difference?</h2>
+    <p>An algorithm is the solution to the problem. It presents a well defined sequence of steps that provides a
+        solution for a given problem. Pseudocode represents the algorithm in a format that resembles any programming
+        language. Pseudocode is the algorithm written in terms of the Structure Theorem.</p>
+
+    <p>The client or business analyst derive the algorithm. Someone with knowledge of programming derives the
+        pseudocode. The programmer develops the program from the pseudocode. The compiler translates the program into
+        byte code or machine code and the program runs! The client is happy. And the Project Manager takes all the
+        credit.</p>
+
+    <h2>Finally! The example:</h2>
+    <p>Algorithm:</p>
+    <p>Our local weatherperson tells us how to convert a temperature from Fahrenheit to Celsius. She says to subtract 32
+        from the Fahrenheit temperature and then multiply that value by 5/9. That's the algorithm.</p>
+    <p>From that we derive the pseudocode:</p>
+
+    <pre><code>Prompt user for fahreheitTemp
+Get fahreheitTemp
+Calculate celciusTemp = (fahreheitTemp - 32) * 5/9
+Display celciusTemp
+</code></pre>
+
+    <p>Which description would you rather have in front of you when you're ready to write a program to convert
+        temperatures? The algorithm or the pseudocode?</p>
+
+    <p>Notice that the pseudocode example has made several decisions for the programmer. These include the order of
+        operations, the variable names and the steps to follow.</p>
+
+    <p><i>The programmer can now focus on programming and not the business problem.</i></p>
+
+    <p>Programmers are often asked to develop solutions for problems they do not fully understand. It is unlikely that
+        you are a meteorologist. You wouldn't need to be because that person already figured out the formula and gave
+        you the algorithm. You just have to program it. And the project manager has already told the client you did that
+        yesterday.</p>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
