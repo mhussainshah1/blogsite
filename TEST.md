@@ -1,82 +1,45 @@
-## Naming Conventions
+## HTML Elements, Attributes and Whitespace
 
-To design a solution algorithm, the programmer has to create variables and objects. To this, they need unique names for those variables and objects. All names should be meaningful. A named variable is a method of identifying a particular storage location in the computer.
+The main parts of our element are:
 
-Often a name describes the type of data stored in a particular variable. For instance, a variable may be one of three simple data types: an integer, a real number or a character. You should pick a name that describes the variable. For example, if you need three numbers, number1, number2 and number3 are more meaningful than A, B and C. However taxRate, income, and nmbrDependents are even better names.
+1. **The opening tag**: This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins or starts to take effect — in this case where the start of the paragraph is.
+1. **The closing tag**: This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the end of the paragraph is. Failing to include a closing tag is a common beginner error and can lead to strange results.
+1. **The content**: This is the content of the element, which in this case is just text.
+1. **The element**: The opening tag plus the closing tag plus the content equals the element.
 
-If variable consists of more than one word, use underscores as word separators, for example sales_tax and word_count. If you don't want an underscore, then words can be joined together with the use of a capital letter as a word separator, for example salesTax and wordCount. The latter is more common and is known as Camel Case.
+### Nesting elements
+You can put elements inside other elements too — this is called **nesting**. If we wanted to state that our cat is **very** grumpy, we could wrap the word "very" in a `<strong>` (Links to an external site.)Links to an external site. element, which means that the word is to be strongly emphasized:
 
-Most programming languages do not tolerate a space in a variable name, as a space would signal the end of the variable name and thus imply that there were two variables.
+```
+<p>My cat is <strong>very</strong> grumpy.</p>
+```
 
-For readability, it is not advisable to string together words all in lower case. A name such as ‘carregistration’ is much harder to read than ‘carRegistration’.
+You do however need to make sure that your elements are properly nested: in the example above, we opened the `p` element first, then the `strong` element, therefore we have to close the `strong` element first, then the `p`. The following is incorrect:
 
-### How naming conventions apply to Java ...
-A well-written program should be self-documenting. Naming conventions make programs more understandable by making them easier to read. They can also give information about the function of the identifier-for example, whether it's a constant, package, or class-which can be helpful in understanding the code.
+```
+<p>My cat is <strong>very grumpy.</p></strong>
+```
 
-<table>
-    <th>
-        <td>Identifier Type</td>
-        <td>Rules for Naming</td>
-        <td>Examples</td>
-    </th>
-    <tr>
-        <td>Packages</td>
-        <td>
-            The prefix of a unique package name is always written in all-lowercase ASCII letters and should be one of the top-level domain names, currently com, edu, gov, mil, net, org, or one of the English two-letter codes identifying countries as specified in ISO Standard 3166, 1981. 
-            Subsequent components of the package name vary according to an organization's own internal naming conventions. Such conventions might specify that certain directory name components be division, department, project, machine, or login names.
-        </td>
-        <td>
-            <code>com.sun.eng</code><br/>
-            <code>com.apple.quicktime.v2</code><br/>
-            <code>edu.cmu.cs.bovik.cheese</code>
-        </td>
-    </tr>
-    <tr>
-        <td>Classes</td>
-        <td>Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).</td>
-        <td>
-            <code>class Raster;</code><br/>
-            <code>class ImageSprite;</code>
-        </td>
-    </tr>
-    <tr>
-        <td>Interfaces</td>
-        <td>Interface names should be capitalized like class names.</td>
-        <td>
-            </code>interface</code><br/> 
-            RasterDelegate;<br/>
-            interface Storing;
-        </td>
-    </tr>
-    <tr>
-        <td>Methods</td>
-        <td>Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.</td>
-        <td>
-            <code>run();</code><br/>
-            <code>runFast();</code><br/>
-            <code>getBackground();</code>
-        </td>
-    </tr>
-    <tr>
-        <td>Variables</td>
-        <td>
-            Except for variables, all instance, class, and class constants are in mixed case with a lowercase first letter. Internal words start with capital letters. Variable names should not start with underscore _ or dollar sign $ characters, even though both are allowed.
-            Variable names should be short yet meaningful. The choice of a variable name should be mnemonic- that is, designed to indicate to the casual observer the intent of its use. One-character variable names should be avoided except for temporary "throwaway" variables. Common names for temporary variables are i, j, k, m, and n for integers; c, d, and e for characters.
-        </td>
-        <td>
-            <code>int i;</code><br/>
-            <code>char c;</code><br/>
-            <code>float myWidth;</code>
-        </td>
-    </tr>
-    <tr>
-        <td>Constants</td>
-        <td>The names of variables declared class constants and of ANSI constants should be all uppercase with words separated by underscores ("_"). (ANSI constants should be avoided, for ease of debugging.)</td>
-        <td>
-            <code>static final int MIN_WIDTH = 4;</code> <br/>
-            <code>static final int MAX_WIDTH = 999;</code><br/>
-            <code>static final int GET_THE_CPU = 1;</code>
-        </td>
-    </tr>                
-</table>
+### Attributes [Section](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Attributes)
+Elements can also have attributes, which look like this:
 
+<img src="/img/grumpy-cat-attribute-small.png" ,alt="attribute"">
+
+Attributes contain extra information about the element which you don't want to appear in the actual content. In this case, the `class` attribute allows you to give the element an identifying name that can be later used to target the element with style information and other things.
+
+An attribute should have:
+
+1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes.)
+1. The attribute name, followed by an equals sign.
+1. An attribute value, with opening and closing quote marks wrapped around it.Even numeric values should have quotes. It doesn't matter if you use single or double quotes - just be consistent.
+
+### Whitespace in HTML
+Whitespace is often included in html code. This is not necessary at all. The two following code snippets are equivalent:
+
+```
+<p>Dogs are silly.</p>
+
+<p>Dogs        are
+         silly.</p>
+```
+No matter how much whitespace you use (which can include space characters, but also line breaks), the HTML parser reduces each one down to a single space when rendering the code. So why use so much whitespace? The answer is readability — it is so much easier to understand what is going on in your code if you have it nicely formatted, and not just bunched up together in a big mess. 
