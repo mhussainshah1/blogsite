@@ -3,11 +3,11 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
     <link rel="stylesheet" th:href="@{/styling.css}" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Felipa" rel="stylesheet">
 
@@ -39,16 +39,57 @@
     </nav>
 </div>
 <br/>
+
+<div class="container">
+
+    <h2>Publishing your repository</h2>
+    <br>
+    <h3>What is a repository?</h3>
+
+    <p>A repository is a storage space where you can access your project, its files, and all the versions of its files that
+        Git saves.</p>
+
+    <h3>Create an empty repository on GitHub</h3>
+
+    <p>Before you can push your local repository to GitHub you first need to create an empty repository.</p>
+
+    <p>When you browse to your GitHub account you can click on the new repository button. The button looks like a plus sign
+        and is found at the top right of the website.</p>
+
+    <p>Alternatively, you can simply browse to <a href="https://github.com/new">https://github.com/new</a>. Fill in the name
+        your repository and click the large green button at the bottom of the page to finish the process of creating it.
+        Your repository will be located at <strong>https://github.com/{your GitHub user name}/MyNewRepository</strong></p>
+
+    <h3>Pushing your local repository to GitHub</h3>
+
+    <p>Now that you have a repository you can go back to your PC and push your existing repository to the one you just
+        created. Make sure you have configured your commit author and email.</p>
+
+    <p>Next, you need to tell your local version of Git about the remote repository. Your local branch is called <strong>master</strong>.
+        Your remote branch is called <strong>origin</strong>.</p>
+
+    <p>You do this by typing:
+        <code>git remote add origin https://github.com/&lt;your GitHub user name&gt;/Products</code></p>
+
+    <p>The <code>git remote</code> command will add a new remote section called origin to our configuration.</p>
+
+    <p>View the git configuration with <code>git config --list</code> to check if your remote repository is initialized.</p>
+
+    <p>Running <code>git remote</code> without any arguments will show you the remote repository aliases.</p>
+
+    <p>If you run the command with the -v option, as <code>git remote -v</code>, you can see the actual URL for each alias.
+    </p>
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
