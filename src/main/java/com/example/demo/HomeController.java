@@ -70,4 +70,9 @@ public class HomeController {
     public String getHtmlCSSBootstrap2(){
         return "htmlcssbootstrap2";
     }
+
+    @GetMapping("/housing")
+    public String getHousing(){
+        return "housing";
+    }
 }
