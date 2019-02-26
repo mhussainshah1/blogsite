@@ -1,48 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-
-    <!-- Bootstrap CSS -->
-    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
-
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Felipa" rel="stylesheet">
-
+    <th:block th:insert="base :: header"></th:block>
     <title>HTML Elements, Attributes and Whitespace</title>
-
 </head>
 
 <body>
 <div class="container-fluid">
-    <nav class="navbar-expand-lg bg-dark navbar-dark">
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse"
-                type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">About the Bootcamp</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/profile">Blog Authors</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <nav th:replace="base :: nav "></nav>
 </div>
 <br/>
 <div class="container">
     <h2>HTML Elements, Attributes and Whitespace</h2>
     <br>
-    <p><img alt="attribute" src="https://res.cloudinary.com/mhussainshah1/image/upload/v1551117997/blog/grumpy-cat-small.png"></p>
+    <p><img alt="attribute"
+            src="https://res.cloudinary.com/mhussainshah1/image/upload/v1551117997/blog/grumpy-cat-small.png"></p>
     <p>The main parts of our element are:</p>
     <ol>
         <li><strong>The opening tag</strong>: This consists of the name of the element (in this case, p), wrapped in
@@ -76,7 +49,9 @@
             href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Attributes">Section</a>
     </h3>
     <p>Elements can also have attributes, which look like this:</p>
-    <p><img alt="attribute" src="https://res.cloudinary.com/mhussainshah1/image/upload/v1551117997/blog/grumpy-cat-attribute-small.png"></p>
+    <p><img alt="attribute"
+            src="https://res.cloudinary.com/mhussainshah1/image/upload/v1551117997/blog/grumpy-cat-attribute-small.png">
+    </p>
     <p>Attributes contain extra information about the element which you don't want to appear in the actual content. In
         this case, the <code>class</code> attribute allows you to give the element an identifying name that can be later
         used to target the element with style information and other things.</p>
