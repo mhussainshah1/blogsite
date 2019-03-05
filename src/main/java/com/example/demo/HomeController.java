@@ -32,47 +32,47 @@ public class HomeController {
     }
 
     @RequestMapping("/pda1")
-    public String getPDA1(){
+    public String getPDA1() {
         return "pda1";
     }
 
     @RequestMapping("/pda2")
-    public String getPDA2(){
+    public String getPDA2() {
         return "pda2";
     }
 
     @RequestMapping("/corejava1")
-    public String getCoreJava1(){
+    public String getCoreJava1() {
         return "corejava1";
     }
 
     @RequestMapping("/corejava2")
-    public String getCoreJava2(){
+    public String getCoreJava2() {
         return "corejava2";
     }
 
     @RequestMapping("/oop1")
-    public String getOOP1(){
+    public String getOOP1() {
         return "oop1";
     }
 
     @RequestMapping("/oop2")
-    public String getOOP2(){
+    public String getOOP2() {
         return "oop2";
     }
 
     @RequestMapping("/htmlcssbootstrap1")
-    public String getHtmlCSSBootstrap1(){
+    public String getHtmlCSSBootstrap1() {
         return "htmlcssbootstrap1";
     }
 
     @GetMapping("/htmlcssbootstrap2")
-    public String getHtmlCSSBootstrap2(){
+    public String getHtmlCSSBootstrap2() {
         return "htmlcssbootstrap2";
     }
 
     @GetMapping("/housing")
-    public String getHousing(){
+    public String getHousing() {
         return "housing";
     }
 

@@ -1,42 +1,14 @@
 <!doctype html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
-    <link rel="stylesheet" th:href="@{/styling.css}" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Felipa" rel="stylesheet">
-
+    <th:block th:insert="base :: header"></th:block>
     <title>Using Git</title>
 
 </head>
 
 <body>
 <div class="container-fluid">
-    <nav class="navbar-expand-lg bg-dark navbar-dark">
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse"
-                type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">About the Bootcamp</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/profile">Blog Authors</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <nav th:replace="base :: nav "></nav>
 </div>
 <br/>
 <div class="container">
@@ -45,37 +17,44 @@
     <p> There are two components to using Git. A server for offsite sharing of your files and a client to work with
         locally.</p>
 
-    <p>Clients are available for all major operating systems. The most common client is to use the Git client at the command
+    <p>Clients are available for all major operating systems. The most common client is to use the Git client at the
+        command
         line. You can download the software from GitHub.com which I’ll talk about more in a moment.</p>
 
-    <p>The Git command line client works on most platforms such as Windows, linux or Mac. You can also use Git clients from
+    <p>The Git command line client works on most platforms such as Windows, linux or Mac. You can also use Git clients
+        from
         Atlassian found at Sourcetreeapp.com. To download that requires an email signup but is otherwise free.</p>
 
-    <p>You may also find Git to be integrated in your favorite IDE such as Eclipse. When you want to save your work remotely
+    <p>You may also find Git to be integrated in your favorite IDE such as Eclipse. When you want to save your work
+        remotely
         you’ll need a server. During this course I’ll focus on GitHub.com. It’s the largest code repository in the
         world.</p>
 
-    <p>GitHub is a web-based Git repository hosting service, which offers all of the distributed revision control and source
+    <p>GitHub is a web-based Git repository hosting service, which offers all of the distributed revision control and
+        source
         code management (SCM) functionality of Git as well as adding its own features. Unlike Git, which is strictly a
         command-line tool, GitHub provides a web-based graphical interface and desktop as well as mobile integration. It
-        also provides access control and several collaboration features such as wikis, task management, and bug tracking and
+        also provides access control and several collaboration features such as wikis, task management, and bug tracking
+        and
         feature requests for every project.[3]</p>
 
-    <p>GitHub offers both plans for private repositories and free accounts,[4] which are usually used to host open-source
-        software projects.[5] As of 2015, GitHub reports having over 9 million users and over 21.1 million repositories,[6]
+    <p>GitHub offers both plans for private repositories and free accounts,[4] which are usually used to host
+        open-source
+        software projects.[5] As of 2015, GitHub reports having over 9 million users and over 21.1 million
+        repositories,[6]
         making it the largest code hoster in the world.[7]</p>
 </div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
