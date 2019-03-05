@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <th:block th:insert ="base :: header"></th:block>
     <title>Home</title>
 </head>
 
-<body background="/img/bgimage.jpg">
+<body > <!--background="/img/bgimage.jpg"-->
 <div class="container-fluid">
     <nav th:replace="base :: nav "></nav>
 </div>
@@ -81,6 +81,11 @@
         <h2 class="alert-heading">Housing.gov</h2>
         <p class="blog-date">2/10/2019</p>
         <p>Creating a Web-based housing portal with Bootstrap, Django, and Java.<a href="/housing">View More</a></p>
+    </div>
+    <div class="alert alert-secondary" role="alert">
+        <h2 class="alert-heading">Dev tools</h2>
+        <p class="blog-date">3/5/2019</p>
+        <p>Creating a Web-based housing portal with Bootstrap, Django, and Java.<a href="/devtools">View More</a></p>
     </div>
 </div>
 <!-- Optional JavaScript -->

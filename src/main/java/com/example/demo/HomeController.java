@@ -75,4 +75,9 @@ public class HomeController {
     public String getHousing(){
         return "housing";
     }
+
+    @GetMapping("/devtools")
+    public String getDevTools(){
+        return "devtools";
+    }
 }

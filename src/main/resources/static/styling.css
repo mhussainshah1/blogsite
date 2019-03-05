@@ -6,10 +6,10 @@
     font-style: italic;
 }
 
-h1, h2, h3, h4 { /*element*/
+/*h1, h2, h3, h4 { !*element*!
 text-decoration: underline;
 font-family: 'Felipa','Dancing Script', cursive;
-}
+}*/
 
 #heading { /*id*/
 
