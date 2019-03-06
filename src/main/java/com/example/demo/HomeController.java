@@ -80,4 +80,9 @@ public class HomeController {
     public String getDevTools(){
         return "devtools";
     }
+
+    @GetMapping("/annotation")
+    public String getAnnotation(){
+        return "annotation";
+    }
 }
