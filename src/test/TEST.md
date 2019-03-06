@@ -1,27 +1,25 @@
-``` java
-public class Person {
+### @Autowired
 
-    private String name;
-    private String gender;
-    private int age;
+### @Controller
 
-    public Person() {
+### @Entity
+### @Id
+### @GeneratedValue(selectedValue = )
 
-    }
+### @RequestMapping(“/pageName”)
+### @GetMapping(“/pageName”)
+### @PostMapping(“/pageName”)
 
-    public Person(String name) {
-        this.name = name;
-    }
+### @ParamVariable(“variable”)
+### @RequestParam(“variable”)
+### @ModelAttribute ("object")
 
-    public Person(String name, String gender) {
-        this.name = name;
-        this.gender = gender;
-    }
+### @Min(x)
+### @Max(x)
+### @NotNull
+### @Size(min = xx, max = xx)
+### @Valid
 
-    public Person(String name, String gender, int age) {
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
-    }
-}
-```
+
+### @SpringBootApplication
+

@@ -21,10 +21,10 @@ Create a blog site that contains multiple entries about topics we have covered s
 
 Sample site screenshots:
 
-[home.PNG](/src/main/resources/img)
-[entry.PNG](/src/main/resources/img)
-[about.PNG](/src/main/resources/img)
-[profile.PNG](/src/main/resources/img) 
+[home.PNG](/src/main/resources/img)<br/>
+[entry.PNG](/src/main/resources/img)<br/>
+[about.PNG](/src/main/resources/img)<br/>
+[profile.PNG](/src/main/resources/img)<br/>
 
 **Presentation**
 
